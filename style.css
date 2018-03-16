@@ -1,0 +1,38 @@
+body{
+    font-family: "华文新魏";
+    font-size: 20pt;
+    color:#15288f;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color:#15288f;
+}
+h1{
+    font-size:36pt;
+    text-align: center;
+}
+p{
+    text-indent: 40px;
+}
+h3{
+    background-color: rgb(72, 20, 139);
+    color: white;
+    padding-left: 10px;
+    line-height: 45px;
+}
+table{
+    border-color:#160575;
+    border-collapse: collapse;
+}
+.container{
+    width: 800px;
+    border: 3px solid #9e3f07;
+    background:url(background.jpg);
+    padding: 20px;
+    margin: 0 auto;
+}
+.img{
+    text-align: center;
+}
