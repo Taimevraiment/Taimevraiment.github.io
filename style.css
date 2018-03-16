@@ -14,7 +14,7 @@ h1{
     text-align: center;
 }
 p{
-    text-indent: 40px;
+    text-indent: 55px;
 }
 h3{
     background-color: rgb(72, 20, 139);
@@ -25,6 +25,7 @@ h3{
 table{
     border-color:#160575;
     border-collapse: collapse;
+    text-align: center;
 }
 .container{
     width: 800px;
