@@ -1,0 +1,7 @@
+.page{
+    background:grey;
+    width: 600px;
+    margin:0 auto;
+    padding:20px;
+    border: 2px solid black;
+}
