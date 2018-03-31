@@ -1,0 +1,73 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-3-17, 16:54:07
+    Author     : Alex
+*/
+body {
+
+    background-color: #4ea9e6;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+h3{
+    text-align: center;
+    font-family: "幼圆";
+    font-weight: 900;
+}
+table{
+    border-color:#ffffff;
+    border-collapse: collapse;
+    text-align: center;
+}
+p{
+    padding:30px 30px 0px 30px;
+    text-indent: 30px;
+    font-family: 微软雅黑;
+}
+.main{
+    background-color: #1d75e9;
+    color: white;
+    font-family: "微软雅黑";
+    border: 1px solid black;
+}
+.page{
+    background-color:#a6e1ec;
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px 20px 40px 20px;
+}
+.footer{
+    height: 30px;
+    background-color: #4b4949;
+}
+.footer_{
+    width: 960px;
+    height: 30px;
+    background-color: #292727;
+    margin: 0 auto;
+}
+
+.list-group{
+    padding:20px;
+}
+
+.theme-dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+    margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+    width: auto;
+}

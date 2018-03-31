@@ -1,41 +1,110 @@
-body{
+body {
     font-family: "华文新魏";
     font-size: 20pt;
-    color:#000000;
+    color: #000000;
     padding: 0;
     margin: 0;
-    background:#b98888;
+    background: #b98888;
+    animation: background 2s;
 }
-a{
+
+a {
     text-decoration: none;
-    color:#15288f;
+    color: #15288f;
+    transition: 2s;
 }
-h1{
-    font-size:36pt;
+
+a:hover {
+    transform: rotate(360deg);
+    text-decoration: none;
+    color: #15288f;
+}
+
+h1 {
+    font-size: 36pt;
     text-align: center;
+    animation: name 2s;
 }
-p{
+
+p {
     text-indent: 55px;
 }
-h3{
+
+h3 {
     background-color: rgb(72, 20, 139);
     color: white;
     padding-left: 10px;
     line-height: 45px;
 }
-table{
-    border-color:#160575;
+
+h3:hover {
+    transition: 2s;
+    background-color: #2f85e7;
+    color: white;
+    padding-left: 10px;
+    line-height: 45px;
+}
+
+table {
+    border-color: #160575;
     border-collapse: collapse;
     text-align: center;
 }
 
-.container{
+.container {
     width: 800px;
     border: 3px solid #9e3f07;
-    background:url(background.jpg);
+    background: url(background.jpg);
     padding: 20px;
     margin: 0 auto;
 }
-.img{
+
+.img {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.img:hover {
+    transition: 1s;
+    width: 550px;
+    margin: 0 auto;
+}
+
+.sp {
     text-align: center;
+    width: 120px;
+    float: left;
+    padding-bottom: 10px;
+}
+
+.sp:hover {
+    transition: 2s;
+    transform: rotate(360deg);
+}
+
+@keyframes background {
+    0% {
+        background-color: #b98888
+    }
+    50% {
+        background-color: #885736
+    }
+    100% {
+        background-color: #b98888
+    }
+}
+
+@keyframes name {
+    0% {
+        font-size: 36pt;
+        color: black
+    }
+    50% {
+        font-size: 50pt;
+        color: #4921b9
+    }
+    100% {
+        font-size: 36pt;
+        color: black
+    }
 }
