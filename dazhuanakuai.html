@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打砖块</title>
+    <script>
+        var $ = function (id) {
+            return document.getElementById(id);
+        };
+
+        var bangleft = 225; //取挡板当前的左坐标，就是left距离  
+        var qiuleft = 295; //取飞球当前的左坐标  
+        var bs = 20; //按一次键移动多少，  
+        var kflag = false; //标记游戏是否已经开始 
+
+        //键盘处理事件  
+        document.onmousemove = function (e) {
+            var bang = $("bangDiv");
+            var qiu = $("qiuDiv");
+            if (bangleft - 1 >= 0 && bangleft + 1 <= 450) {
+                bangleft = e.clientX - 450;
+                bang.style.left = bangleft + "px";
+            }
+            if (!kflag) { //如果游戏没开始  
+                qiuleft = bangleft + 70;
+                qx = qiuleft;
+                qiu.style.left = qiuleft + "px"; //改变飞球位置  
+            }
+        }
+        document.onclick = function () {
+            if (!kflag)
+                go()
+            kflag = true;
+        }
+
+        function keydownEvent(event) {
+            var qiu = $("qiuDiv"); //取飞球的div 
+            var bang = $("bangDiv"); //取挡板div 
+            if (event.keyCode == 32) { //如果是空格  
+                if (!kflag)
+                    go()
+                kflag = true;
+            }
+            if (event.keyCode == 37) { //如果是左箭头  
+                for (var i = 0; i < bs; i++) {
+                    if (bangleft - 1 != 0) { //0即left为0，即已经到左移动到了墙壁，就不再起作用。  
+                        bangleft -= 1; //每一次向左移动1，其实上面做了for循环，结果就是每按一次向左移动了bs=10，为什么要循环着去加而不一次性去加，原因很简单就是为了防止一次就加过了超出了范围，同时我们可以通过设定bs参数的值来改变挡板移动的快慢  
+                        bang.style.left = bangleft + "px"; //改变挡板位置  
+                        if (!kflag) { //如果游戏没开始  
+                            qiuleft -= 1;
+                            qx = qiuleft;
+                            qiu.style.left = qiuleft + "px"; //改变飞球位置  
+                        }
+                    }
+                }
+            }
+            if (event.keyCode == 39) { //如果是右箭头同理  
+                for (var i = 0; i < bs; i++) {
+                    if (bangleft + 1 != 450) { //检测是否碰右壁  
+                        bangleft += 1;
+                        bang.style.left = bangleft + "px";
+                        if (!kflag) {
+                            qiuleft += 1;
+                            qiu.style.left = qiuleft + "px";
+                        }
+                    }
+                }
+            }
+
+        }
+        var qx = 295; //飞球初始坐标left  
+        var qy = 580; //飞球初始坐标top  
+        var jiao = 89; //初始飞行角度  
+        var zx = 1; //控制left位移的正负  
+        var zy = -1; //控制top位移的正负  
+        var rp = null; //控制游戏进程  
+        var mark = 0; //得分
+        var zdivs = new Array(); //用于存储所有的砖块。  
+
+        window.onload = function () {
+            var x = 15;
+            var y = 35;
+            var m = $("mainDiv");
+            for (var j = 0; j <= 18; j++) {
+                for (var i = 0; i <= 20; i++) {
+                    var di = document.createElement("div");
+                    var r = Math.floor(Math.random() * 255);
+                    var g = Math.floor(Math.random() * 255);
+                    var b = Math.floor(Math.random() * 255);
+                    di.style.width = 28;
+                    di.style.height = 13;
+                    di.style.position = "absolute";
+                    di.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+                    di.style.left = x + j * 30;
+                    di.style.top = y + i * 15;
+                    m.appendChild(di);
+                    zdivs[zdivs.length] = di;
+                }
+            }
+            var markd = document.getElementById("markDiv").innerText = mark;
+        }
+
+        function seSmall(a, b, c, d) {
+
+            if (a < b && a < c && a < d) {
+                return 1;
+            }
+            if (b < a && b < c && b < d) {
+                return 2;
+            }
+            if (c < a && c < b && c < d) {
+                return 3;
+            }
+            if (d < b && d < c && d < a) {
+                return 4;
+            }
+        }
+
+        function checkIsP(qx, qy, zx, zy) {
+            var f = {
+                x: qx,
+                y: qy,
+                x1: qx + 10,
+                y1: qy + 10
+            }
+            var z = {
+                x: zx,
+                y: zy,
+                x1: zx + 30,
+                y1: zy + 15
+            }
+            var sx;
+            var sy;
+            sx = f.x >= z.x ? f.x : z.x;
+            sy = f.y >= z.y ? f.y : z.y;
+            if (sx >= f.x && sx <= f.x1 && sy >= f.y && sy <= f.y1 && sx >= z.x && sx <= z.x1 && sy >= z.y && sy <= z.y1) {
+                return seSmall(Math.abs(f.x - z.x1), Math.abs(f.x1 - z.x), Math.abs(f.y - z.y1), Math.abs(f.y1 - z.y));
+            } else {
+                return 0;
+            }
+        }
+
+        function go() {
+            var qiu = $("qiuDiv");
+            qx = qx + zx * Math.cos((2 * Math.PI / 360) * jiao);
+            qy = qy + zy * Math.sin((2 * Math.PI / 360) * jiao);
+            if (qy >= 580) {
+                if (qx < bangleft || qx > bangleft + 150) { //判断是否接住  
+                    clearTimeout(rp);
+                    var m = $("mainDiv");
+                    var smark = document.createElement("div");
+                    smark.style.top = 400;
+                    smark.style.position = "absolute";
+                    smark.style.left = 250;
+                    var marktxt = document.createTextNode("GAME OVER");
+                    setTimeout("window.location.reload()", 3000);
+                    m.appendChild(smark);
+                    smark.appendChild(marktxt);
+                    mark = 0;
+                    setTimeout("var markd = document.getElementById('markDiv').innerText = mark", 3000);;
+                } else {
+                    zy = -1;
+                    if ((qx - bangleft) > (75)) {
+                        jiao = 90 - (qx - bangleft + 10 - 75) / 75 * 90;
+                        zx = 1;
+                    } else {
+                        jiao = 90 - (75 - (qx - bangleft + 10)) / 75 * 90;
+                        zx = -1;
+                    }
+                    rp = setTimeout("go()", 1);
+                }
+            } else {
+                for (var i = 0; i < zdivs.length; i++) {
+                    var io = checkIsP(qx, qy, zdivs[i].offsetLeft, zdivs[i].offsetTop);
+                    if (io != 0) {
+                        zdivs[i].style.display = "none";
+                        mark++;
+                        var markd = document.getElementById("markDiv").innerText = mark;
+                        zdivs.splice(i, 1);
+                        if (io == 1) {
+                            zx = 1;
+                        }
+                        if (io == 2) {
+                            zx = -1;
+                        }
+                        if (io == 3) {
+                            zy = 1;
+                        }
+                        if (io == 4) {
+                            zy = -1;
+                        }
+                        break;
+                    }
+                }
+
+                if (qx >= 600) zx = -1;
+                if (qx <= 0) zx = 1;
+                if (qy <= 0) zy = 1;
+                qiu.style.left = qx + "px";
+                qiu.style.top = qy + "px";
+                rp = setTimeout("go()", 1);
+            }
+
+        }
+    </script>
+</head>
+
+<body style="background-color:grey;" onkeydown="keydownEvent(event)">
+    <div align="center">
+        <div style="width:600px;height:600px;background-color:#BFEFFF;border:5px solid #87CEFA;position:relative;" id="mainDiv">
+            <div id="markDiv" style="width:60px;height:25px;top:5;left:270;border:1px dotted blue;background-color:#BFEFFF"></div>
+            <div id="qiuDiv" style="width:10px;height:10px;top:580;left:295;background-color:red;border-radius:50%;position:absolute;"></div>
+            <div id="bangDiv" style="width:150px;height:10px;bottom:1;left:225;background-color:black;position:absolute;"></div>
+        </div>
+    </div>
+
+    <body>
+
+</html>
