@@ -5,114 +5,271 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <title>个人博客</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+
+<head>
+    <title>个人博客</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap.theme.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/theme.css" rel="stylesheet" type="text/css"/>
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
           <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
           <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-    </head>
-    <body>
-        <div class="page">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html">个人博客</a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html">主页</a></li>
-                            <li><a href="#about">关于</a></li>
-                            <li><a href="#contact">联系我</a></li>
-                            <li><a href="#else">其他</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li ><a href="#">登录 <span class="sr-only"></span></a></li>
-                            <li><a href="#/">注册</a></li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
+</head>
+<style>
+    #containe {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        border: 3px solid #333;
+        overflow: hidden;
+    }
+
+    #list {
+        position: absolute;
+        z-index: 1;
+        width: 2400px;
+        height: 400px;
+        left: 0px;
+        transition: 1s;
+    }
+
+    #list img {
+        float: left;
+        width: 600px;
+        height: 400px;
+    }
+
+    #buttons {
+        position: absolute;
+        left: 250px;
+        bottom: 20px;
+        z-index: 2;
+        height: 10px;
+        width: 100px;
+    }
+
+    #buttons span {
+        float: left;
+        margin-right: 5px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        background: #333;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    #buttons .on {
+        background: orangered;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 180px;
+        z-index: 2;
+        display: none;
+        width: 40px;
+        height: 40px;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 39px;
+        text-align: center;
+        color: #fff;
+        background-color: RGBA(0, 0, 0, .3);
+        cursor: pointer;
+    }
+
+    .arrow:hover {
+        background-color: RGBA(0, 0, 0, .7);
+    }
+
+    #containe:hover .arrow {
+        display: block;
+    }
+
+    #prev {
+        left: 20px;
+        text-decoration: none;
+    }
+
+    #next {
+        right: 20px;
+        text-decoration: none;
+    }
+</style>
+<script>
+    window.onload = function () {
+        var width = 600;
+        var list = document.getElementById('list');
+        var prev = document.getElementById('prev');
+        var next = document.getElementById('next');
+        var num = list.children.length; // get img number
+        var buttons = document.getElementById('buttons').getElementsByTagName('span');
+
+        function animate(offset) {
+            var left = list.style.left ? parseInt(list.style.left) : 0;
+            var newLeft = left - offset * width;
+            list.style.left = newLeft + 'px';
+            if (newLeft <= -num * width) {
+                list.style.left = '0px';
+                buttons[3].className = '';
+                buttons[0].className = 'on';
+            } else if (newLeft > 0) {
+                list.style.left = -(num - 1) * width + 'px';
+                buttons[0].className = '';
+                buttons[3].className = 'on';
+            } else {
+                buttons[-(newLeft / 600) - offset].className = '';
+                buttons[-(newLeft / 600)].className = 'on';
+            }
+        }
+        prev.onclick = function () {
+            animate(-1);
+        }
+        next.onclick = function () {
+            animate(1);
+        }
+        var cha = setInterval(function () {
+            animate(1)
+        }, 4000);
+
+        function autochange() {
+            cha = setInterval(function () {
+                animate(1)
+            }, 4000);
+        }
+
+        function stopchange() {
+            clearInterval(cha);
+        }
+        list.addEventListener('mouseover', stopchange);
+        list.addEventListener('mouseout', autochange);
+        prev.addEventListener('mouseover', stopchange);
+        prev.addEventListener('mouseout', autochange);
+        next.addEventListener('mouseover', stopchange);
+        next.addEventListener('mouseout', autochange);
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('mouseover', stopchange);
+            buttons[i].addEventListener('mouseout', autochange);
+            buttons[i].onclick = function () {
+                var left = list.style.left ? parseInt(list.style.left) : 0;
+                var index = this.getAttribute("index");
+                for (var j = 0; j < buttons.length; j++) {
+                    if (buttons[j].className == 'on') {
+                        var oldindex = j + 1;
+                        buttons[j].className = '';
+                        break;
+                    }
+                }
+                this.className = 'on';
+                var newLeft = left + (oldindex - index) * width;
+                list.style.left = newLeft + 'px';
+            }
+        }
+    }
+</script>
+
+<body>
+    <div class="page">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">个人博客</a>
                 </div>
-            </nav>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="list-group">
-                        <a href="index.html" class="list-group-item active">主页</a>
-                        <a href="resume.html" class="list-group-item">个人信息</a>
-                        <a href="album.html" class="list-group-item">旅游相册</a>
-                        <a href="#" class="list-group-item">兴趣活动</a>
-                        <a href="#" class="list-group-item">心情日记</a>
-                    </div>
-                    <img src="img/touxiang.jpg" alt="" width="150" class="center-block">
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="index.html">主页</a>
+                        </li>
+                        <li>
+                            <a href="#about">关于</a>
+                        </li>
+                        <li>
+                            <a href="#contact">联系我</a>
+                        </li>
+                        <li>
+                            <a href="#else">其他</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">登录
+                                <span class="sr-only"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/">注册</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-9">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img src="img/p1.jpg" alt="  " class="center-block" width="100%">
-                            </div>
-                            <div class="item">
-                                <img src="img/p2.jpg" alt="  " class="center-block" width="100%">
-                            </div>
-                            <div class="item">
-                                <img src="img/p3.jpg" alt="  " class="center-block" width="100%">
-                            </div>
-                        </div>
-                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                    <p>
-                        银白的月光洒在地上，到处都有蟋蟀的凄切的叫声。夜的香气弥漫在空中，织成了一个柔软的网，
-                        把所有的景物都罩在里面。眼睛所接触到的都是罩上这个柔软的网的东西，任是一草一木，都不是
-                        象在白天里那样地现实了，它们都有着模糊、空幻的色彩，每一样都隐藏了它的细致之点，都保守
-                        着它的秘密，使人有一种如梦如幻的感觉。  
-                    </p>
-                    <p>
-                        他靠纱窗望出去。满天的星又密又忙，它们声息全无，而看来只觉得天上热闹。一梳月亮象形容未长
-                        成的女孩子，但见人已不羞缩，光明和轮廓都清新刻露，渐渐可烘衬夜景。小园草地里的小虫琐琐屑
-                        屑地在夜谈。不知哪里的蛙群齐心协力地干号，象声浪给火煮得发沸。几星萤火优游来去，不象飞行，
-                        象在厚密的空气里漂浮，月光不到的阴黑处，一点萤火忽明，象夏夜的一只微绿的小眼睛。                        
-                    </p>
-                    <p>
-                        风，那么轻柔，带动着小树小草一起翩翩起舞，当一阵清风飘来，如同母亲的手轻轻抚摸自己的脸庞，
-                        我喜欢那种感觉，带有丝丝凉意，让人心旷神怡。享受生活，不一定要有山珍海味菱罗绸缎为伴，大自
-                        然便是上帝所赐予人类最为珍贵的。
-                    </p>
-                    <p>
-                        一片片荷叶挨挨挤挤的，好像是一群兄弟姐妹，心连着心，亲密无比。这时，吹来一阵风，“绿色的海洋
-                        ”霎时间波涛起伏，荷叶一片连着一片翻腾着，美丽极了。当风停了的时候，“绿色的海洋”又平静了下
-                        来，叶面上的水珠儿滴溜溜的滚动着。晶莹剔透，像一颗颗漂亮的珍珠在阳光的照耀下显得十分耀眼。
-                    </p>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="list-group">
+                    <a href="index.html" class="list-group-item active">主页</a>
+                    <a href="resume.html" class="list-group-item">个人信息</a>
+                    <a href="album.html" class="list-group-item">旅游相册</a>
+                    <a href="#" class="list-group-item">兴趣活动</a>
+                    <a href="#" class="list-group-item">心情日记</a>
                 </div>
+                <img src="img/touxiang.jpg" alt="" width="150" class="center-block">
+            </div>
+            <div class="col-lg-9">
+                <div id="containe">
+                    <div id="list">
+                        <img src="img/p1.jpg" />
+                        <img src="img/p2.jpg" />
+                        <img src="img/p3.jpg" />
+                        <img src="img/p4.jpg" />
+                    </div>
+                    <div id="buttons">
+                        <span index="1" class="on"></span>
+                        <span index="2"></span>
+                        <span index="3"></span>
+                        <span index="4"></span>
+                    </div>
+                    <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+                    <a href="javascript:;" id="next" class="arrow">&gt;</a>
+                </div>
+                <p>
+                    银白的月光洒在地上，到处都有蟋蟀的凄切的叫声。夜的香气弥漫在空中，织成了一个柔软的网， 把所有的景物都罩在里面。眼睛所接触到的都是罩上这个柔软的网的东西，任是一草一木，都不是 象在白天里那样地现实了，它们都有着模糊、空幻的色彩，每一样都隐藏了它的细致之点，都保守
+                    着它的秘密，使人有一种如梦如幻的感觉。
+                </p>
+                <p>
+                    他靠纱窗望出去。满天的星又密又忙，它们声息全无，而看来只觉得天上热闹。一梳月亮象形容未长 成的女孩子，但见人已不羞缩，光明和轮廓都清新刻露，渐渐可烘衬夜景。小园草地里的小虫琐琐屑 屑地在夜谈。不知哪里的蛙群齐心协力地干号，象声浪给火煮得发沸。几星萤火优游来去，不象飞行，
+                    象在厚密的空气里漂浮，月光不到的阴黑处，一点萤火忽明，象夏夜的一只微绿的小眼睛。
+                </p>
+                <p>
+                    风，那么轻柔，带动着小树小草一起翩翩起舞，当一阵清风飘来，如同母亲的手轻轻抚摸自己的脸庞， 我喜欢那种感觉，带有丝丝凉意，让人心旷神怡。享受生活，不一定要有山珍海味菱罗绸缎为伴，大自 然便是上帝所赐予人类最为珍贵的。
+                </p>
+                <p>
+                    一片片荷叶挨挨挤挤的，好像是一群兄弟姐妹，心连着心，亲密无比。这时，吹来一阵风，“绿色的海洋 ”霎时间波涛起伏，荷叶一片连着一片翻腾着，美丽极了。当风停了的时候，“绿色的海洋”又平静了下 来，叶面上的水珠儿滴溜溜的滚动着。晶莹剔透，像一颗颗漂亮的珍珠在阳光的照耀下显得十分耀眼。
+                </p>
             </div>
         </div>
-        <div class="footer"><div class="footer_"></div></div>
-    </body>
+    </div>
+    <div class="footer">
+        <div class="footer_"></div>
+    </div>
+</body>
+
 </html>
