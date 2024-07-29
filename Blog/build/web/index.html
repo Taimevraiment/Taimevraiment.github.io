@@ -5,114 +5,136 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <title>个人博客</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+
+<head>
+    <title>个人博客</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap.theme.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/theme.css" rel="stylesheet" type="text/css"/>
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
           <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
           <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-    </head>
-    <body>
-        <div class="page">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html">个人博客</a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html">主页</a></li>
-                            <li><a href="#about">关于</a></li>
-                            <li><a href="#contact">联系我</a></li>
-                            <li><a href="#else">其他</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li ><a href="#">登录 <span class="sr-only"></span></a></li>
-                            <li><a href="#/">注册</a></li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
+</head>
+
+<body>
+    <div class="page">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">个人博客</a>
                 </div>
-            </nav>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="list-group">
-                        <a href="index.html" class="list-group-item active">主页</a>
-                        <a href="resume.html" class="list-group-item">个人信息</a>
-                        <a href="album.html" class="list-group-item">旅游相册</a>
-                        <a href="#" class="list-group-item">兴趣活动</a>
-                        <a href="#" class="list-group-item">心情日记</a>
-                    </div>
-                    <img src="img/touxiang.jpg" alt="" width="150" class="center-block">
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">主页</a></li>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#contact">联系我</a></li>
+                        <li><a href="#else">其他</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">登录 <span class="sr-only"></span></a></li>
+                        <li><a href="#/">注册</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="list-group">
+                    <a href="index.html" class="list-group-item active">主页</a>
+                    <a href="resume.html" class="list-group-item">个人信息</a>
+                    <a href="album.html" class="list-group-item">旅游相册</a>
+                    <a href="#" class="list-group-item">兴趣活动</a>
+                    <a href="#" class="list-group-item">心情日记</a>
                 </div>
-                <div class="col-lg-9">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img src="img/p1.jpg" alt="  " class="center-block" width="100%">
-                            </div>
-                            <div class="item">
-                                <img src="img/p2.jpg" alt="  " class="center-block" width="100%">
-                            </div>
-                            <div class="item">
-                                <img src="img/p3.jpg" alt="  " class="center-block" width="100%">
-                            </div>
+                <img src="img/touxiang.jpg" alt="" width="150" class="center-block">
+            </div>
+            <div class="col-lg-9">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="img/p1.jpg" alt="  " class="center-block" width="100%">
                         </div>
-                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                        <div class="item">
+                            <img src="img/p2.jpg" alt="  " class="center-block" width="100%">
+                        </div>
+                        <div class="item">
+                            <img src="img/p3.jpg" alt="  " class="center-block" width="100%">
+                        </div>
                     </div>
-                    <p>
-                        银白的月光洒在地上，到处都有蟋蟀的凄切的叫声。夜的香气弥漫在空中，织成了一个柔软的网，
-                        把所有的景物都罩在里面。眼睛所接触到的都是罩上这个柔软的网的东西，任是一草一木，都不是
-                        象在白天里那样地现实了，它们都有着模糊、空幻的色彩，每一样都隐藏了它的细致之点，都保守
-                        着它的秘密，使人有一种如梦如幻的感觉。  
-                    </p>
-                    <p>
-                        他靠纱窗望出去。满天的星又密又忙，它们声息全无，而看来只觉得天上热闹。一梳月亮象形容未长
-                        成的女孩子，但见人已不羞缩，光明和轮廓都清新刻露，渐渐可烘衬夜景。小园草地里的小虫琐琐屑
-                        屑地在夜谈。不知哪里的蛙群齐心协力地干号，象声浪给火煮得发沸。几星萤火优游来去，不象飞行，
-                        象在厚密的空气里漂浮，月光不到的阴黑处，一点萤火忽明，象夏夜的一只微绿的小眼睛。                        
-                    </p>
-                    <p>
-                        风，那么轻柔，带动着小树小草一起翩翩起舞，当一阵清风飘来，如同母亲的手轻轻抚摸自己的脸庞，
-                        我喜欢那种感觉，带有丝丝凉意，让人心旷神怡。享受生活，不一定要有山珍海味菱罗绸缎为伴，大自
-                        然便是上帝所赐予人类最为珍贵的。
-                    </p>
-                    <p>
-                        一片片荷叶挨挨挤挤的，好像是一群兄弟姐妹，心连着心，亲密无比。这时，吹来一阵风，“绿色的海洋
-                        ”霎时间波涛起伏，荷叶一片连着一片翻腾着，美丽极了。当风停了的时候，“绿色的海洋”又平静了下
-                        来，叶面上的水珠儿滴溜溜的滚动着。晶莹剔透，像一颗颗漂亮的珍珠在阳光的照耀下显得十分耀眼。
-                    </p>
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
+                <p>
+                    银白的月光洒在地上，到处都有蟋蟀的凄切的叫声。夜的香气弥漫在空中，织成了一个柔软的网，
+                    把所有的景物都罩在里面。眼睛所接触到的都是罩上这个柔软的网的东西，任是一草一木，都不是
+                    象在白天里那样地现实了，它们都有着模糊、空幻的色彩，每一样都隐藏了它的细致之点，都保守
+                    着它的秘密，使人有一种如梦如幻的感觉。
+                </p>
+                <p>
+                    他靠纱窗望出去。满天的星又密又忙，它们声息全无，而看来只觉得天上热闹。一梳月亮象形容未长
+                    成的女孩子，但见人已不羞缩，光明和轮廓都清新刻露，渐渐可烘衬夜景。小园草地里的小虫琐琐屑
+                    屑地在夜谈。不知哪里的蛙群齐心协力地干号，象声浪给火煮得发沸。几星萤火优游来去，不象飞行，
+                    象在厚密的空气里漂浮，月光不到的阴黑处，一点萤火忽明，象夏夜的一只微绿的小眼睛。
+                </p>
+                <p>
+                    风，那么轻柔，带动着小树小草一起翩翩起舞，当一阵清风飘来，如同母亲的手轻轻抚摸自己的脸庞，
+                    我喜欢那种感觉，带有丝丝凉意，让人心旷神怡。享受生活，不一定要有山珍海味菱罗绸缎为伴，大自
+                    然便是上帝所赐予人类最为珍贵的。
+                </p>
+                <p>
+                    一片片荷叶挨挨挤挤的，好像是一群兄弟姐妹，心连着心，亲密无比。这时，吹来一阵风，“绿色的海洋
+                    ”霎时间波涛起伏，荷叶一片连着一片翻腾着，美丽极了。当风停了的时候，“绿色的海洋”又平静了下
+                    来，叶面上的水珠儿滴溜溜的滚动着。晶莹剔透，像一颗颗漂亮的珍珠在阳光的照耀下显得十分耀眼。
+                </p>
             </div>
         </div>
-        <div class="footer"><div class="footer_"></div></div>
-    </body>
+    </div>
+    <div class="footer">
+        <div class="footer_">
+            <strong>
+                <a href="https://beian.miit.gov.cn" target="_blank">沪ICP备2023006701号-1</a>
+            </strong>
+        </div>
+    </div>
+</body>
+<style>
+    .footer {
+        height: 200px;
+    }
+
+    .footer_ {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
 </html>
