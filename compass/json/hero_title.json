@@ -1,0 +1,3799 @@
+[
+  {
+    "tid": 0,
+    "name": "sort",
+    "sort": [
+      "无",
+      "按攻击",
+      "按防御",
+      "按生命",
+      "按射程",
+      "按移动速度",
+      "按大招充能时间",
+      "按大招发动时间",
+      "按大招无敌时间",
+      "按蓄力发动时间",
+      "按无发动卡速",
+      "按无发动卡硬直",
+      "按短发动卡速",
+      "按短发动卡硬直",
+      "按长发动卡速",
+      "按长发动卡硬直",
+      "按近卡速",
+      "按近卡硬直",
+      "按周卡速",
+      "按周卡硬直",
+      "按远卡速",
+      "按远卡硬直",
+      "按连卡速",
+      "按连卡硬直",
+      "按敌移卡速",
+      "按敌移卡硬直",
+      "按普攻频率",
+      "按三维总和"
+    ],
+    "total": [
+      "0",
+      "atk",
+      "def",
+      "hp",
+      "range",
+      "speed",
+      "hs_time",
+      "hs_start",
+      "invicible_time",
+      "ha_time",
+      "card_no_time_start",
+      "card_no_time_total",
+      "card_short_time_start",
+      "card_short_time_total",
+      "card_long_time_start",
+      "card_long_time_total",
+      "card_near_time_start",
+      "card_near_time_total",
+      "card_around_time_start",
+      "card_around_time_total",
+      "card_far_time_start",
+      "card_far_time_total",
+      "card_continuation_time_start",
+      "card_continuation_time_total",
+      "card_wrap_time_start",
+      "card_wrap_time_total",
+      "freq_eva",
+      "attr_sum"
+    ]
+  },
+  {
+    "tid": 1,
+    "name": "collaboration",
+    "collaboration": [
+      "全部英雄",
+      "常驻英雄",
+      "常驻英雄(官方)",
+      "常驻英雄(玩家投票)",
+      "联动英雄"
+    ]
+  },
+  {
+    "tid": 2,
+    "name": "herotype",
+    "herotype": [
+      "sprinter",
+      "tank",
+      "gunner",
+      "attacker"
+    ]
+  },
+  {
+    "tid": 3,
+    "name": "hstype",
+    "hstype": [
+      "攻",
+      "强",
+      "全",
+      "普",
+      "愈",
+      "键",
+      "周",
+      "远",
+      "止",
+      "置",
+      "毒",
+      "贯",
+      "默",
+      "弱",
+      "冻",
+      "押",
+      "突",
+      "破",
+      "秒",
+      "指",
+      "缩",
+      "连",
+      "引",
+      "移",
+      "除",
+      "敌",
+      "吸"
+    ]
+  },
+  {
+    "tid": 4,
+    "name": "hatype",
+    "hatype": [
+      "跑",
+      "强",
+      "愈",
+      "周",
+      "敌",
+      "前",
+      "移",
+      "防",
+      "攻",
+      "爆",
+      "扩",
+      "远",
+      "反",
+      "射",
+      "突",
+      "投",
+      "键",
+      "默",
+      "柱",
+      "跳",
+      "全",
+      "弱",
+      "破",
+      "充",
+      "毒",
+      "引",
+      "闪",
+      "押",
+      "吸",
+      "止",
+      "飞"
+    ]
+  },
+  {
+    "tid": 5,
+    "name": "abtype",
+    "abtype": [
+      "自",
+      "友",
+      "键",
+      "爆",
+      "周",
+      "强",
+      "敌",
+      "切",
+      "愈",
+      "充",
+      "毒",
+      "御",
+      "弱",
+      "倒",
+      "免",
+      "隐",
+      "标",
+      "止",
+      "押",
+      "速",
+      "卡",
+      "攻",
+      "程",
+      "吸",
+      "反"
+    ]
+  },
+  {
+    "tid": 6,
+    "name": "buff",
+    "herobuff": [
+      {
+        "bid": 0,
+        "hid": 2,
+        "name": "大锤[被动]",
+        "type": "ability",
+        "buff": [
+          [
+            -1,
+            2,
+            2,
+            "def",
+            0
+          ]
+        ],
+        "isBuff": true
+      },
+      {
+        "bid": 1,
+        "hid": 3,
+        "name": "莉莉卡[被动]",
+        "type": "ability",
+        "buff": [
+          [
+            -1,
+            3,
+            1.4,
+            "atk",
+            1
+          ]
+        ],
+        "isBuff": true
+      },
+      {
+        "bid": 2,
+        "hid": 3,
+        "name": "莉莉卡[必杀]",
+        "type": "heroskill",
+        "buff": [
+          [
+            -1,
+            3,
+            2.2,
+            "atk",
+            2
+          ],
+          [
+            -1,
+            3,
+            2.2,
+            "def",
+            2
+          ]
+        ],
+        "isBuff": true
+      },
+      {
+        "bid": 3,
+        "hid": 6,
+        "name": "贞德[蓄力]",
+        "type": "heroaction",
+        "buff": [
+          [
+            -1,
+            6,
+            0.108,
+            "heal",
+            3,
+            0.6
+          ]
+        ],
+        "intvl": 0.6,
+        "isBuff": true
+      },
+      {
+        "bid": 4,
+        "hid": 15,
+        "name": "初音[被动]",
+        "type": "ability",
+        "buff": [
+          [
+            -1,
+            15,
+            0.075,
+            "heal",
+            4,
+            0.8
+          ]
+        ],
+        "intvl": 0.8,
+        "isBuff": true
+      },
+      {
+        "bid": 5,
+        "hid": 15,
+        "name": "初音[必杀]",
+        "type": "heroskill",
+        "buff": [
+          [
+            -1,
+            15,
+            0.3,
+            "heal&clear",
+            5,
+            0.6
+          ]
+        ],
+        "intvl": 0.6,
+        "isBuff": true
+      },
+      {
+        "bid": 6,
+        "hid": 17,
+        "name": "可可[必杀]",
+        "type": "heroskill",
+        "buff": [
+          [
+            -1,
+            17,
+            0.1,
+            "atk",
+            6
+          ],
+          [
+            -1,
+            17,
+            0.1,
+            "def",
+            6
+          ]
+        ],
+        "isBuff": false
+      },
+      {
+        "bid": 7,
+        "hid": 17,
+        "name": "可可[被动]",
+        "type": "ability",
+        "buff": [
+          [
+            -1,
+            17,
+            0.36,
+            "atk",
+            7
+          ]
+        ],
+        "isBuff": false
+      },
+      {
+        "bid": 8,
+        "hid": 23,
+        "name": "勇者[必杀]攻",
+        "type": "heroskill",
+        "buff": [
+          [
+            -1,
+            23,
+            3,
+            "atk",
+            8
+          ]
+        ],
+        "isBuff": true
+      },
+      {
+        "bid": 9,
+        "hid": 23,
+        "name": "勇者[必杀]愈",
+        "type": "heroskill",
+        "buff": [
+          [
+            -1,
+            23,
+            0.187,
+            "heal",
+            9,
+            0.8
+          ]
+        ],
+        "intvl": 0.8,
+        "isBuff": true
+      },
+      {
+        "bid": 10,
+        "hid": 24,
+        "name": "EMT[蓄力]",
+        "type": "heroaction",
+        "buff": [
+          [
+            -1,
+            24,
+            0.14,
+            "heal",
+            10,
+            0.4
+          ]
+        ],
+        "intvl": 0.4,
+        "isBuff": true
+      },
+      {
+        "bid": 11,
+        "hid": 28,
+        "name": "铃[蓄力]",
+        "type": "heroaction",
+        "buff": [
+          [
+            -1,
+            28,
+            1.5,
+            "atk",
+            11
+          ],
+          [
+            -1,
+            28,
+            2.1,
+            "def",
+            11
+          ]
+        ],
+        "isBuff": true
+      },
+      {
+        "bid": 12,
+        "hid": 28,
+        "name": "铃[必杀]",
+        "type": "heroskill",
+        "buff": [
+          [
+            -1,
+            28,
+            3,
+            "atk",
+            12
+          ],
+          [
+            -1,
+            28,
+            6,
+            "def",
+            12
+          ]
+        ],
+        "isBuff": true
+      },
+      {
+        "bid": 13,
+        "hid": 33,
+        "name": "黑白熊[蓄力]",
+        "type": "heroaction",
+        "buff": [
+          [
+            -1,
+            33,
+            0.59,
+            "atk",
+            13
+          ],
+          [
+            -1,
+            33,
+            0.2,
+            "def",
+            13
+          ]
+        ],
+        "isBuff": false
+      },
+      {
+        "bid": 14,
+        "hid": 40,
+        "name": "托马斯[蓄力]",
+        "type": "heroaction",
+        "buff": [
+          [
+            -1,
+            40,
+            0.5,
+            "hpdef",
+            14
+          ]
+        ],
+        "isBuff": true
+      },
+      {
+        "bid": 15,
+        "hid": 45,
+        "name": "闪闪[蓄力]",
+        "type": "heroaction",
+        "buff": [
+          [
+            -1,
+            45,
+            0.05,
+            "def",
+            15
+          ]
+        ],
+        "isBuff": false
+      },
+      {
+        "bid": 16,
+        "hid": 57,
+        "name": "爱丽丝[被动]",
+        "type": "ability",
+        "buff": [
+          [
+            -1,
+            57,
+            1.15,
+            "atk",
+            16
+          ]
+        ],
+        "isBuff": true
+      },
+      {
+        "bid": 17,
+        "hid": 57,
+        "name": "爱丽丝[蓄力]",
+        "type": "heroaction",
+        "buff": [
+          [
+            -1,
+            57,
+            0.2,
+            "dmgdef",
+            17
+          ]
+        ],
+        "isBuff": true
+      },
+      {
+        "bid": 18,
+        "hid": 78,
+        "name": "库·希[蓄力②]",
+        "type": "heroaction",
+        "buff": [
+          [
+            3,
+            78,
+            0.6,
+            "atk",
+            18
+          ],
+          [
+            3,
+            78,
+            0,
+            "def",
+            18
+          ]
+        ],
+        "isBuff": false
+      },
+      {
+        "bid": 19,
+        "hid": 81,
+        "name": "副团长[被动]",
+        "type": "ability",
+        "buff": [
+          [
+            -1,
+            81,
+            0.8,
+            "dmgdef",
+            19
+          ]
+        ],
+        "isBuff": true
+      }
+    ],
+    "cardbuff": [
+      {
+        "isBuff": true,
+        "title": [
+          "未选择",
+          "120%",
+          "150%"
+        ],
+        "name": "攻击"
+      },
+      {
+        "isBuff": false,
+        "title": [
+          "未选择",
+          "1%",
+          "55%",
+          "60%",
+          "70%"
+        ],
+        "name": "攻击"
+      },
+      {
+        "isBuff": true,
+        "title": [
+          "未选择",
+          "500%"
+        ],
+        "name": "防御"
+      },
+      {
+        "isBuff": false,
+        "title": [
+          "未选择",
+          "0%",
+          "20%",
+          "40%",
+          "50%"
+        ],
+        "name": "防御"
+      }
+    ]
+  },
+  {
+    "tid": 7,
+    "name": "heroaction",
+    "heroaction": [
+      {
+        "hid": 1,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 2,
+        "mag": 0.18,
+        "type": "dmgdef",
+        "intvl": 0
+      },
+      {
+        "hid": 3,
+        "mag": 1.95,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 4,
+        "mag": 4.8,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 5,
+        "mag": 1.1,
+        "type": "atk",
+        "intvl": -1,
+        "hit": 10,
+        "mode": "slide"
+      },
+      {
+        "hid": 6,
+        "mag": 0.051,
+        "type": "heal",
+        "intvl": 0.6
+      },
+      {
+        "hid": 7,
+        "mag": 1.15,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 8,
+        "mag": 1.65,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 9,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 10,
+        "mag": 1.4,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 11,
+        "mag": 1.21,
+        "type": "atk",
+        "intvl": -1,
+        "hit": 8,
+        "mode": "slide"
+      },
+      {
+        "hid": 12,
+        "mag": 0.15,
+        "type": "heal",
+        "intvl": 1
+      },
+      {
+        "hid": 13,
+        "mag": [
+          0.124,
+          0.24
+        ],
+        "type": [
+          "heal",
+          "poisonatk"
+        ],
+        "intvl": [
+          1.3,
+          1.3
+        ],
+        "mode": "all"
+      },
+      {
+        "hid": 14,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 15,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 16,
+        "mag": 0.048,
+        "type": "heal",
+        "intvl": 1.2
+      },
+      {
+        "hid": 17,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 18,
+        "mag": 1.14,
+        "type": "cardup",
+        "intvl": 0
+      },
+      {
+        "hid": 19,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 20,
+        "mag": 1.2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 21,
+        "mag": 1.9,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 22,
+        "mag": 1.35,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 221,
+        "mag": 2.5,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 23,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 24,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 25,
+        "mag": 1.6,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 26,
+        "mag": 2.5,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 27,
+        "mag": 0.715,
+        "type": "atk",
+        "intvl": 0.2
+      },
+      {
+        "hid": 28,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 29,
+        "mag": 0.06,
+        "type": "heal",
+        "intvl": 0.6
+      },
+      {
+        "hid": 30,
+        "mag": [
+          0.76,
+          0.33,
+          1
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "dmgup"
+        ],
+        "intvl": [
+          -1,
+          0.65,
+          6.5
+        ],
+        "mode": "byorder"
+      },
+      {
+        "hid": 31,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 32,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 33,
+        "mag": 13,
+        "type": "buff",
+        "intvl": 0
+      },
+      {
+        "hid": 34,
+        "mag": 1.5,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 35,
+        "mag": 3,
+        "type": "break",
+        "intvl": -1
+      },
+      {
+        "hid": 36,
+        "mag": 0.12,
+        "type": "heal",
+        "intvl": 1
+      },
+      {
+        "hid": 37,
+        "mag": 2.7,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 38,
+        "mag": 1.8,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 39,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 40,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 41,
+        "mag": 2.2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 411,
+        "mag": 2.2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 42,
+        "mag": [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.385
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atkadd"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "mode": "byorder"
+      },
+      {
+        "hid": 43,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 44,
+        "mag": [
+          2.1,
+          2.3,
+          3.3
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "select"
+      },
+      {
+        "hid": 45,
+        "mag": 15,
+        "type": "buff",
+        "intvl": 0
+      },
+      {
+        "hid": 46,
+        "mag": 3,
+        "type": "break",
+        "intvl": -1
+      },
+      {
+        "hid": 47,
+        "mag": [
+          1,
+          2,
+          3.5,
+          6,
+          8
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "title": [
+          "100%",
+          "200%",
+          "350%",
+          "600%",
+          "800%"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "select"
+      },
+      {
+        "hid": 48,
+        "mag": 1,
+        "type": "retatk",
+        "intvl": 0
+      },
+      {
+        "hid": 49,
+        "mag": 2.4,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 50,
+        "mag": 2.7,
+        "type": "counter",
+        "intvl": 0
+      },
+      {
+        "hid": 51,
+        "mag": [
+          1.5,
+          "1,1",
+          "1.2,0.64,0.64,0.64"
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "select"
+      },
+      {
+        "hid": 52,
+        "mag": 0.68,
+        "type": "atk",
+        "intvl": 0.27
+      },
+      {
+        "hid": 53,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 54,
+        "mag": 0.44,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 55,
+        "mag": [
+          1.5,
+          3.2
+        ],
+        "type": "atk",
+        "intvl": 2,
+        "mode": "bytime"
+      },
+      {
+        "hid": 56,
+        "mag": [
+          0.07,
+          [
+            1,
+            3.5,
+            0.5
+          ]
+        ],
+        "type": [
+          "heal",
+          [
+            "atk",
+            "atk",
+            "poison"
+          ]
+        ],
+        "title": [
+          "止/默",
+          "爆",
+          "毒"
+        ],
+        "intvl": [
+          -1,
+          [
+            -1,
+            -1,
+            10
+          ]
+        ],
+        "mode": "select"
+      },
+      {
+        "hid": 57,
+        "mag": [
+          1,
+          17
+        ],
+        "type": [
+          "atk",
+          "buff"
+        ],
+        "intvl": [
+          -1,
+          0
+        ],
+        "mode": "byorder"
+      },
+      {
+        "hid": 58,
+        "mag": 1,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 59,
+        "mag": [
+          0.001,
+          2.2
+        ],
+        "type": [
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1
+        ],
+        "mode": "byorder"
+      },
+      {
+        "hid": 60,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 61,
+        "mag": [
+          0.48,
+          0.48,
+          0.48
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "byorder"
+      },
+      {
+        "hid": 62,
+        "mag": [
+          1.45,
+          "1,2.3",
+          "1.3,1.4,1.05,0.35,0.35,0.35,0.35,0.35,0.35,4"
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "select"
+      },
+      {
+        "hid": 63,
+        "mag": [
+          0.8,
+          0.8,
+          0.8
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "byorder"
+      },
+      {
+        "hid": 64,
+        "mag": 0.57,
+        "type": "atk",
+        "intvl": -1,
+        "hit": 6,
+        "mode": "slide"
+      },
+      {
+        "hid": 65,
+        "mag": 0.95,
+        "type": "atk",
+        "intvl": -1,
+        "hit": 5,
+        "mode": "slide"
+      },
+      {
+        "hid": 66,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 67,
+        "mag": [
+          0.3,
+          0.3,
+          0.3,
+          1.3
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "byorder"
+      },
+      {
+        "hid": 68,
+        "mag": [
+          0.17,
+          1
+        ],
+        "type": "suck",
+        "intvl": 1
+      },
+      {
+        "hid": 69,
+        "mag": [
+          1.24,
+          2
+        ],
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 70,
+        "mag": [
+          1,
+          0.3
+        ],
+        "type": [
+          "atk",
+          "poison"
+        ],
+        "intvl": [
+          -1,
+          10
+        ],
+        "mode": "byorder"
+      },
+      {
+        "hid": 71,
+        "mag": [
+          0.5,
+          2.5
+        ],
+        "type": "atk",
+        "intvl": 5,
+        "mode": "bytime"
+      },
+      {
+        "hid": 72,
+        "mag": 3.2,
+        "type": "break",
+        "intvl": -1
+      },
+      {
+        "hid": 73,
+        "mag": [
+          2,
+          0.85,
+          0.85,
+          0.85,
+          0.85,
+          0.85,
+          0.85,
+          0.85,
+          0.85,
+          0.85,
+          0.85,
+          0.85
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "byorder"
+      },
+      {
+        "hid": 74,
+        "mag": 1.5,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 75,
+        "mag": [
+          2,
+          1.13
+        ],
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 76,
+        "mag": 2,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 77,
+        "mag": [
+          1.1,
+          "1.1,1.1",
+          "1.1,1.1,1.1",
+          "1.1,1.1,1.1,1.1"
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "select"
+      },
+      {
+        "hid": 78,
+        "mag": [
+          0.7,
+          3.2,
+          [
+            1,
+            18
+          ],
+          [
+            0.94,
+            0.15
+          ]
+        ],
+        "type": [
+          "atk",
+          "atk",
+          [
+            "atk",
+            "buff"
+          ],
+          [
+            "atk",
+            "dmgdef"
+          ]
+        ],
+        "title": [
+          "突进攻击-头",
+          "突进攻击-鳍",
+          "面刺攻击",
+          "加特林攻击"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          [
+            -1,
+            3.2
+          ],
+          [
+            0.3,
+            0
+          ]
+        ],
+        "mode": "select"
+      },
+      {
+        "hid": 79,
+        "mag": 2.5,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 80,
+        "mag": 2.5,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 81,
+        "mag": [
+          0.1,
+          1
+        ],
+        "type": [
+          "heal",
+          "reflect"
+        ],
+        "intvl": [
+          1,
+          0
+        ],
+        "mode": "all"
+      },
+      {
+        "hid": 82,
+        "mag": 1.5,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 83,
+        "mag": 1.5,
+        "type": "atk",
+        "intvl": -1
+      },
+      {
+        "hid": 84,
+        "mag": [
+          1,
+          2,
+          4
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "select"
+      },
+      {
+        "hid": 85,
+        "mag": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "type": [
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk",
+          "atk"
+        ],
+        "intvl": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "mode": "byorder"
+      }
+    ]
+  },
+  {
+    "tid": 8,
+    "name": "heroskill",
+    "heroskill": [
+      {
+        "hid": 1,
+        "mag": [
+          2.2
+        ],
+        "type": [
+          "atk"
+        ],
+        "intvl": [
+          0.6
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 2,
+        "mag": [
+          6
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.2
+        ],
+        "time": [
+          2
+        ]
+      },
+      {
+        "hid": 3,
+        "mag": [
+          2,
+          2
+        ],
+        "type": [
+          "atkup",
+          "defup"
+        ],
+        "intvl": [
+          0,
+          0
+        ],
+        "time": [
+          14,
+          14
+        ]
+      },
+      {
+        "hid": 4,
+        "mag": 0,
+        "type": "",
+        "intvl": 0,
+        "time": -1
+      },
+      {
+        "hid": 5,
+        "mag": [
+          100000
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 6,
+        "mag": 0,
+        "type": "",
+        "intvl": 0,
+        "time": -1
+      },
+      {
+        "hid": 7,
+        "mag": [
+          1,
+          1.2,
+          1.2
+        ],
+        "type": [
+          "heal",
+          "atkup",
+          "defup"
+        ],
+        "intvl": [
+          0,
+          0,
+          0
+        ],
+        "time": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "hid": 8,
+        "mag": [
+          100000
+        ],
+        "type": [
+          "atkup"
+        ],
+        "subtype": [
+          "nocard",
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          3
+        ]
+      },
+      {
+        "hid": 9,
+        "mag": [
+          3
+        ],
+        "type": [
+          "defup"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          9
+        ]
+      },
+      {
+        "hid": 10,
+        "mag": [
+          0.8
+        ],
+        "type": [
+          "atk"
+        ],
+        "intvl": [
+          0.4
+        ],
+        "time": [
+          13
+        ]
+      },
+      {
+        "hid": 11,
+        "mag": [
+          12,
+          12
+        ],
+        "type": [
+          "atkup",
+          "defup"
+        ],
+        "intvl": [
+          0,
+          0
+        ],
+        "time": [
+          11.3,
+          11.3
+        ]
+      },
+      {
+        "hid": 12,
+        "mag": 0,
+        "type": "",
+        "intvl": 0,
+        "time": -1
+      },
+      {
+        "hid": 13,
+        "mag": [
+          0.1
+        ],
+        "type": [
+          "poisonatk"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 14,
+        "mag": [
+          2.4
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 15,
+        "mag": [
+          5
+        ],
+        "type": [
+          "buff"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          15
+        ]
+      },
+      {
+        "hid": 16,
+        "mag": 0,
+        "type": "",
+        "intvl": 0,
+        "time": -1
+      },
+      {
+        "hid": 17,
+        "mag": [
+          6
+        ],
+        "type": [
+          "buff"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          15
+        ]
+      },
+      {
+        "hid": 18,
+        "mag": [
+          100
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 19,
+        "mag": [
+          4
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "noshield",
+          "invicible"
+        ],
+        "intvl": [
+          0.2
+        ],
+        "time": [
+          2
+        ]
+      },
+      {
+        "hid": 20,
+        "mag": [
+          6
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.8
+        ],
+        "time": [
+          5
+        ]
+      },
+      {
+        "hid": 21,
+        "mag": [
+          1
+        ],
+        "type": [
+          "dmgup"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 22,
+        "mag": [
+          1.35,
+          1.4,
+          0.65
+        ],
+        "type": [
+          "atkup",
+          "defup",
+          "heal"
+        ],
+        "subtype": [
+          "change"
+        ],
+        "intvl": [
+          0,
+          0,
+          0
+        ],
+        "time": [
+          16,
+          16,
+          0
+        ]
+      },
+      {
+        "hid": 221,
+        "mag": [
+          1.35,
+          1.4,
+          0.6
+        ],
+        "type": [
+          "atkup",
+          "defup",
+          "heal"
+        ],
+        "subtype": [
+          "change"
+        ],
+        "intvl": [
+          0,
+          0,
+          0
+        ],
+        "time": [
+          16,
+          16,
+          0
+        ]
+      },
+      {
+        "hid": 23,
+        "mag": [
+          8,
+          9
+        ],
+        "type": [
+          "buff",
+          "buff"
+        ],
+        "subtype": [
+          "select"
+        ],
+        "title": [
+          "攻击3倍",
+          "续愈"
+        ],
+        "intvl": [
+          0,
+          0
+        ],
+        "time": [
+          8,
+          8
+        ]
+      },
+      {
+        "hid": 24,
+        "mag": [
+          0.8,
+          0.14
+        ],
+        "type": [
+          "atk",
+          "heal"
+        ],
+        "subtype": [
+          "nocard"
+        ],
+        "intvl": [
+          0.16,
+          0.8
+        ],
+        "time": [
+          11,
+          11
+        ]
+      },
+      {
+        "hid": 25,
+        "mag": [
+          3
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "nocard",
+          "break"
+        ],
+        "intvl": [
+          0.8
+        ],
+        "time": [
+          6.35
+        ]
+      },
+      {
+        "hid": 26,
+        "mag": [
+          3.5
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 27,
+        "mag": [
+          0.88
+        ],
+        "type": [
+          "atk"
+        ],
+        "intvl": [
+          0.3
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 28,
+        "mag": [
+          2,
+          3
+        ],
+        "type": [
+          "atkup",
+          "defup"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          15
+        ]
+      },
+      {
+        "hid": 29,
+        "mag": [
+          2.5
+        ],
+        "type": [
+          "atk"
+        ],
+        "intvl": [
+          0.2
+        ],
+        "time": [
+          10.9
+        ]
+      },
+      {
+        "hid": 30,
+        "mag": [
+          2.2
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.2
+        ],
+        "time": [
+          2
+        ]
+      },
+      {
+        "hid": 31,
+        "mag": [
+          99999
+        ],
+        "type": [
+          "haup"
+        ],
+        "subtype": [
+          "noshield"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 32,
+        "mag": [
+          4
+        ],
+        "type": [
+          "atk"
+        ],
+        "intvl": [
+          0.2
+        ],
+        "time": [
+          1
+        ]
+      },
+      {
+        "hid": 33,
+        "mag": [
+          99999
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "die"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 34,
+        "mag": [
+          2
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "break",
+          "invicible"
+        ],
+        "intvl": [
+          0.15
+        ],
+        "time": [
+          3.5
+        ]
+      },
+      {
+        "hid": 35,
+        "mag": [
+          0.5
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible",
+          "break",
+          "clearbuff"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 36,
+        "mag": [
+          999
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "noshield",
+          "hp1",
+          "invicible"
+        ],
+        "intvl": [
+          0.3
+        ],
+        "time": [
+          0.7
+        ]
+      },
+      {
+        "hid": 37,
+        "mag": [
+          1
+        ],
+        "type": [
+          "dmgup"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          6
+        ]
+      },
+      {
+        "hid": 38,
+        "mag": [
+          100000
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 39,
+        "mag": [
+          2.2
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.3
+        ],
+        "time": [
+          1.4
+        ]
+      },
+      {
+        "hid": 40,
+        "mag": [
+          1.4
+        ],
+        "type": [
+          "atk"
+        ],
+        "intvl": [
+          0.5
+        ],
+        "time": [
+          17
+        ]
+      },
+      {
+        "hid": 41,
+        "mag": [
+          100000
+        ],
+        "type": [
+          "aup"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          11.7
+        ]
+      },
+      {
+        "hid": 411,
+        "mag": [
+          100000
+        ],
+        "type": [
+          "aup"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          11.7
+        ]
+      },
+      {
+        "hid": 42,
+        "mag": 0,
+        "type": "",
+        "intvl": 0,
+        "time": -1
+      },
+      {
+        "hid": 43,
+        "mag": [
+          1.3
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.2
+        ],
+        "time": [
+          4.7
+        ]
+      },
+      {
+        "hid": 44,
+        "mag": [
+          99999
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "noshield",
+          "invicible"
+        ],
+        "intvl": [
+          0.4
+        ],
+        "time": [
+          1.5
+        ]
+      },
+      {
+        "hid": 45,
+        "mag": [
+          99999
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "die"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 46,
+        "mag": [
+          2
+        ],
+        "type": [
+          "atk"
+        ],
+        "intvl": [
+          0.3
+        ],
+        "time": [
+          7.2
+        ]
+      },
+      {
+        "hid": 47,
+        "mag": [
+          2.8,
+          2.4
+        ],
+        "type": [
+          "atkup",
+          "defup"
+        ],
+        "intvl": [
+          0,
+          0
+        ],
+        "time": [
+          24.5,
+          24.5
+        ]
+      },
+      {
+        "hid": 48,
+        "mag": 0,
+        "type": "",
+        "intvl": 0,
+        "time": -1
+      },
+      {
+        "hid": 49,
+        "mag": [
+          1.3
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "break",
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 50,
+        "mag": [
+          1
+        ],
+        "type": [
+          "atknoshield"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          13.75
+        ]
+      },
+      {
+        "hid": 51,
+        "mag": [
+          1,
+          99999
+        ],
+        "type": [
+          "atk",
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.3,
+          3.2
+        ],
+        "time": [
+          2.7,
+          3.2
+        ]
+      },
+      {
+        "hid": 52,
+        "mag": [
+          3
+        ],
+        "type": [
+          "atk"
+        ],
+        "intvl": [
+          0.3
+        ],
+        "time": [
+          1.2
+        ]
+      },
+      {
+        "hid": 53,
+        "mag": [
+          3,
+          0.075
+        ],
+        "type": [
+          "atkup",
+          "heal"
+        ],
+        "intvl": [
+          0,
+          0.8
+        ],
+        "time": [
+          14.8,
+          14.8
+        ]
+      },
+      {
+        "hid": 54,
+        "mag": [
+          100000
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "noshield",
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 55,
+        "mag": [
+          4
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "break",
+          "invicible"
+        ],
+        "intvl": [
+          0.4
+        ],
+        "time": [
+          1.2
+        ]
+      },
+      {
+        "hid": 56,
+        "mag": [
+          3,
+          99999
+        ],
+        "type": [
+          "atk",
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.2,
+          2
+        ],
+        "time": [
+          1,
+          2
+        ]
+      },
+      {
+        "hid": 57,
+        "mag": 0,
+        "type": "",
+        "intvl": 0,
+        "time": -1
+      },
+      {
+        "hid": 58,
+        "mag": 1.5,
+        "type": [
+          "cardup"
+        ],
+        "subtype": [
+          "weakhit"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          60
+        ]
+      },
+      {
+        "hid": 59,
+        "mag": [
+          100000
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.22
+        ],
+        "time": [
+          3.6
+        ]
+      },
+      {
+        "hid": 60,
+        "mag": [
+          99999
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "die"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 61,
+        "mag": [
+          5
+        ],
+        "type": [
+          "atk"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 62,
+        "mag": [
+          4
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.3
+        ],
+        "time": [
+          5
+        ]
+      },
+      {
+        "hid": 63,
+        "mag": [
+          1,
+          100000
+        ],
+        "type": [
+          "atk",
+          "atk"
+        ],
+        "subtype": [
+          "invicible",
+          "noshield"
+        ],
+        "intvl": [
+          0.3,
+          3.3
+        ],
+        "time": [
+          3,
+          3.3
+        ]
+      },
+      {
+        "hid": 64,
+        "mag": [
+          1.5
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.2
+        ],
+        "time": [
+          3
+        ]
+      },
+      {
+        "hid": 65,
+        "mag": [
+          3
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "break",
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 66,
+        "mag": [
+          3
+        ],
+        "type": [
+          "atkup"
+        ],
+        "subtype": [
+          "break",
+          "hp1"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          6
+        ]
+      },
+      {
+        "hid": 67,
+        "mag": [
+          1
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 68,
+        "mag": [
+          0.2,
+          1
+        ],
+        "type": [
+          "suck"
+        ],
+        "subtype": [
+          "nocard",
+          "noshield"
+        ],
+        "intvl": [
+          0.6
+        ],
+        "time": [
+          8
+        ]
+      },
+      {
+        "hid": 69,
+        "mag": [
+          99999
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "die"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          9
+        ]
+      },
+      {
+        "hid": 70,
+        "mag": [
+          0.8,
+          2
+        ],
+        "type": [
+          "poison",
+          "poison"
+        ],
+        "subtype": [
+          "select"
+        ],
+        "intvl": [
+          0.83,
+          0.83
+        ],
+        "title": [
+          "周围",
+          "中心"
+        ],
+        "time": [
+          10,
+          10
+        ]
+      },
+      {
+        "hid": 71,
+        "mag": [
+          100000,
+          1.5
+        ],
+        "type": [
+          "atk",
+          "atk"
+        ],
+        "subtype": [
+          "select"
+        ],
+        "title": [
+          "中心",
+          "两边"
+        ],
+        "intvl": [
+          0,
+          0
+        ],
+        "time": [
+          0,
+          0
+        ]
+      },
+      {
+        "hid": 72,
+        "mag": [
+          5
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0.4
+        ],
+        "time": [
+          8
+        ]
+      },
+      {
+        "hid": 73,
+        "mag": [
+          99999
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "noshield",
+          "invicible"
+        ],
+        "intvl": [
+          0.8
+        ],
+        "time": [
+          1.6
+        ]
+      },
+      {
+        "hid": 74,
+        "mag": [
+          3.2
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "break",
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 75,
+        "mag": 0,
+        "type": "",
+        "intvl": 0,
+        "time": -1
+      },
+      {
+        "hid": 76,
+        "mag": [
+          1.5
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "noshield",
+          "invicible"
+        ],
+        "intvl": [
+          0.5
+        ],
+        "time": [
+          2.5
+        ]
+      },
+      {
+        "hid": 77,
+        "mag": [
+          100000
+        ],
+        "type": [
+          "atk",
+          "noshield"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 78,
+        "mag": [
+          12,
+          1
+        ],
+        "type": [
+          "defup",
+          "heal"
+        ],
+        "intvl": [
+          0,
+          0
+        ],
+        "time": [
+          12.5,
+          12.5
+        ]
+      },
+      {
+        "hid": 79,
+        "mag": [
+          100000
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 80,
+        "mag": [
+          4
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          1
+        ],
+        "time": [
+          3
+        ]
+      },
+      {
+        "hid": 81,
+        "mag": [
+          3,
+          3,
+          1
+        ],
+        "type": [
+          "atkup",
+          "defup",
+          "heal"
+        ],
+        "intvl": [
+          0,
+          0,
+          0
+        ],
+        "time": [
+          20,
+          20,
+          20
+        ]
+      },
+      {
+        "hid": 82,
+        "mag": [
+          99999
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "invicible"
+        ],
+        "intvl": [
+          0
+        ],
+        "time": [
+          0
+        ]
+      },
+      {
+        "hid": 83,
+        "mag": [
+          99999
+        ],
+        "type": [
+          "atk"
+        ],
+        "subtype": [
+          "noshield",
+          "invicible"
+        ],
+        "intvl": [
+          0.3
+        ],
+        "time": [
+          0.7
+        ]
+      },
+      {
+        "hid": 84,
+        "mag": [
+          100000,
+          2.5
+        ],
+        "type": [
+          "atk",
+          "atk"
+        ],
+        "subtype": [
+          "select",
+          "break"
+        ],
+        "title": [
+          "中心",
+          "四周"
+        ],
+        "intvl": [
+          0,
+          0
+        ],
+        "time": [
+          0,
+          0
+        ]
+      },
+      {
+        "hid": 85,
+        "mag": [
+          2
+        ],
+        "type": [
+          "atk"
+        ],
+        "intvl": [
+          0.5
+        ],
+        "time": [
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "tid": 9,
+    "name": "ability",
+    "ability": [
+      {
+        "hid": 1,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 2,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 3,
+        "mag": 1.3,
+        "type": "atkup",
+        "intvl": -1
+      },
+      {
+        "hid": 4,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 5,
+        "mag": 1.27,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 6,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 7,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 8,
+        "mag": 1.28,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 9,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 10,
+        "mag": 1.3,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 11,
+        "mag": [
+          1.12,
+          1.24,
+          1.36,
+          1.48,
+          1.6,
+          1.72
+        ],
+        "type": "atkup",
+        "subtype": "select",
+        "title": "杀",
+        "intvl": -1
+      },
+      {
+        "hid": 12,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 13,
+        "mag": 0.035,
+        "type": "poison",
+        "intvl": 1
+      },
+      {
+        "hid": 14,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 15,
+        "mag": 0.015,
+        "type": "heal",
+        "intvl": 0.8
+      },
+      {
+        "hid": 16,
+        "mag": [
+          1.61,
+          2.08,
+          2.43,
+          2.63,
+          2.7
+        ],
+        "type": "defup",
+        "subtype": "select",
+        "title": "人",
+        "intvl": -1
+      },
+      {
+        "hid": 17,
+        "mag": 7,
+        "type": "buff",
+        "intvl": -1,
+        "time": 7
+      },
+      {
+        "hid": 18,
+        "mag": 1.09,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 19,
+        "mag": 1.25,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 20,
+        "mag": 1.37,
+        "type": "atkup",
+        "intvl": -1,
+        "time": 4.5
+      },
+      {
+        "hid": 21,
+        "mag": 1.28,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 22,
+        "mag": 0.6,
+        "type": "heal",
+        "intvl": -1
+      },
+      {
+        "hid": 221,
+        "mag": 0.6,
+        "type": "heal",
+        "intvl": -1
+      },
+      {
+        "hid": 23,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 24,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 25,
+        "mag": -1,
+        "type": "byHp",
+        "intvl": -1
+      },
+      {
+        "hid": 26,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 27,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 28,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 29,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 30,
+        "mag": [
+          1.33,
+          1.4
+        ],
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 31,
+        "mag": 0.2,
+        "type": "heal",
+        "intvl": 2
+      },
+      {
+        "hid": 32,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 33,
+        "mag": 2.2,
+        "type": "atk",
+        "subtype": "break",
+        "intvl": -1
+      },
+      {
+        "hid": 34,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 35,
+        "mag": 1.5,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 36,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 37,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 38,
+        "mag": 0.07,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 39,
+        "mag": 4.3,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 40,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 41,
+        "mag": 0,
+        "type": "change",
+        "intvl": -1
+      },
+      {
+        "hid": 411,
+        "mag": 0,
+        "type": "change",
+        "intvl": -1
+      },
+      {
+        "hid": 42,
+        "mag": [
+          1.65,
+          2.3,
+          2.95,
+          3.6
+        ],
+        "type": "defup",
+        "subtype": "select",
+        "title": [
+          "90秒",
+          "120秒",
+          "150秒",
+          "180秒"
+        ],
+        "intvl": -1
+      },
+      {
+        "hid": 43,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 44,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 45,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 46,
+        "mag": [
+          1.8,
+          4
+        ],
+        "type": [
+          "atkup",
+          "defup"
+        ],
+        "subtype": "all",
+        "intvl": [
+          -1,
+          -1
+        ],
+        "time": [
+          8,
+          8
+        ]
+      },
+      {
+        "hid": 47,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 48,
+        "mag": [
+          0.026,
+          0.234
+        ],
+        "type": "heal",
+        "subtype": "select",
+        "title": "人",
+        "intvl": 0.8
+      },
+      {
+        "hid": 49,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 50,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 51,
+        "mag": 0.43,
+        "type": "atkadd",
+        "intvl": -1
+      },
+      {
+        "hid": 52,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 53,
+        "mag": 3.2,
+        "type": "defup",
+        "intvl": -1
+      },
+      {
+        "hid": 54,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 55,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 56,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 57,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 58,
+        "mag": 1.5,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 59,
+        "mag": [
+          0.9,
+          1.1
+        ],
+        "type": "dmgadd",
+        "intvl": -1
+      },
+      {
+        "hid": 60,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 61,
+        "mag": 1.4,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 62,
+        "mag": 1.2,
+        "type": "atkup",
+        "intvl": -1
+      },
+      {
+        "hid": 63,
+        "mag": 1.2,
+        "type": "atkup",
+        "intvl": -1
+      },
+      {
+        "hid": 64,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 65,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 66,
+        "mag": 0.1,
+        "type": "hpreduce",
+        "intvl": -1
+      },
+      {
+        "hid": 67,
+        "mag": [
+          0.266,
+          0.022,
+          0.48
+        ],
+        "type": [
+          "atk",
+          "heal",
+          "atk"
+        ],
+        "intvl": [
+          0.33,
+          0.8,
+          0.3
+        ],
+        "subtype": "select",
+        "title": [
+          "远程模式",
+          "维修模式",
+          "近战模式"
+        ]
+      },
+      {
+        "hid": 68,
+        "mag": 4,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 69,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 70,
+        "mag": 1.8,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 71,
+        "mag": 1.75,
+        "type": "atkup",
+        "intvl": -1
+      },
+      {
+        "hid": 72,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 73,
+        "mag": 0.83,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 74,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 75,
+        "mag": [
+          1.33,
+          1.4,
+          1.13
+        ],
+        "type": "atkup",
+        "intvl": -1
+      },
+      {
+        "hid": 76,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 77,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 78,
+        "mag": [
+          2,
+          2,
+          4,
+          2
+        ],
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 79,
+        "mag": 1.2,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 80,
+        "mag": 1.34,
+        "type": "byHp",
+        "intvl": -1
+      },
+      {
+        "hid": 81,
+        "mag": [
+          2,
+          0.5
+        ],
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 82,
+        "mag": [
+          1.125,
+          1.25,
+          2,
+          2.54,
+          3
+        ],
+        "type": "atkup",
+        "subtype": "select",
+        "title": [
+          "3格:112.5%",
+          "6格:125%",
+          "9格:200%",
+          "15格:254%",
+          "20格:300%"
+        ],
+        "intvl": -1
+      },
+      {
+        "hid": 83,
+        "mag": -1,
+        "type": "byHp",
+        "intvl": -1
+      },
+      {
+        "hid": 84,
+        "mag": -1,
+        "type": "",
+        "intvl": -1
+      },
+      {
+        "hid": 85,
+        "mag": 2,
+        "type": "cardup",
+        "intvl": -1
+      }
+    ]
+  },
+  {
+    "tid": 10,
+    "name": "CONST",
+    "CONST": {
+      "WEAK_ATK": 1.2,
+      "CARD_DOWN": 1.3
+    }
+  },
+  {
+    "tid": 11,
+    "name": "badge",
+    "badge": [
+      {
+        "name": "攻击",
+        "attr": "batk",
+        "levelval": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "name": "防御",
+        "attr": "bdef",
+        "levelval": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "name": "生命",
+        "attr": "bhp",
+        "levelval": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "name": "速度",
+        "attr": "bspeed",
+        "levelval": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "name": "能量",
+        "attr": "hs",
+        "levelval": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "name": "冷却",
+        "attr": "cd",
+        "levelval": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "name": "收点",
+        "attr": "key",
+        "levelval": [
+          2,
+          4,
+          6
+        ]
+      },
+      {
+        "name": "火抗",
+        "attr": "red",
+        "levelval": [
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "name": "水抗",
+        "attr": "blue",
+        "levelval": [
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "name": "木抗",
+        "attr": "green",
+        "levelval": [
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "name": "晕抗",
+        "attr": "stan",
+        "levelval": [
+          2,
+          5,
+          8
+        ]
+      },
+      {
+        "name": "默抗",
+        "attr": "silent",
+        "levelval": [
+          4,
+          8,
+          12
+        ]
+      },
+      {
+        "name": "毒抗",
+        "attr": "poison",
+        "levelval": [
+          4,
+          8,
+          12
+        ]
+      }
+    ]
+  }
+]

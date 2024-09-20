@@ -1,0 +1,33 @@
+[
+    {
+        "tid": 0,
+        "cardinfo": 7,
+        "heroinfo": 9,
+        "cardtitle": 5,
+        "herotitle": 1,
+        "herocalendar": 6,
+        "rankinfo": 1,
+        "all": 1,
+        "isVision": 0,
+        "card_check": 383,
+        "hero_check": 87
+    },
+    {
+        "tid": 1,
+        "calendar_url": "https://taimevraiment.github.io/compass/hero_calendar5.png",
+        "hero_pv_url": "http://rio698o83.hn-bkt.clouddn.com/hero_pv",
+        "share_url": "https://taimevraiment.github.io/compass/share.jpg",
+        "share_url_qq": "https://taimevraiment.github.io/compass/share_qq.jpg"
+    },
+    {
+        "tid": 2,
+        "img_url": "https://taimevraiment.github.io/compass/",
+        "img_url2": "http://taime.web3v.work/compass/imgs/",
+        "img_url3": "http://yagitools.html.xdomain.jp/compas-deck/img/card/"
+    },
+    {
+        "tid": 3,
+        "index_img": [],
+        "index_text": []
+    }
+]
