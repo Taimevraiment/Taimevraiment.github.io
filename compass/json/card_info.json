@@ -6354,7 +6354,7 @@
     "effect_time": -1,
     "effect_magnification": "150%",
     "range": "前方10格,宽1.5格",
-    "board": "血攻",
+    "board": "主攻/主血",
     "evaluation": "A",
     "atk1": 63,
     "def1": 17,
